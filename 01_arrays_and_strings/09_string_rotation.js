@@ -2,6 +2,10 @@ function isSubstring(str1, str2) {
   return str1.includes(str2);
 }
 
+/**
+ * Time complexity: O(n^2)
+ * Space complexity: O(1)
+*/
 function stringRotation(str1, str2) {
   if (str1 === str2) return true;
 
@@ -45,3 +49,11 @@ console.assert(
   stringRotation("anthonyngisgreat", "ngisgreatanthony") === true,
   "anthonyngisgreat is a rotation of ngisgreatanthony"
 );
+
+/*
+ * A more clever way.
+ *
+ * erbottlewat is a rotation of waterbottle?
+ * double the string => erbottlewaterbottlewater
+ * then check if waterbottle is a substring of the doubled string
+*/

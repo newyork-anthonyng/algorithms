@@ -1,3 +1,7 @@
+/**
+ * Time complexity: O(n)
+ * Space complexity: O(1)
+*/
 function oneAway(string1, string2) {
   let startIndex;
 
@@ -22,6 +26,13 @@ function oneAway(string1, string2) {
 
   return Math.abs(startIndex - endIndex) <= 1;
 }
+/**
+ * Another way to think about this is to address all three use cases
+ * 1. When there is only 1 letter difference
+ * 2. When there is one letter added
+ * 3. When there is one letter removed
+ * 2 & 3 are inverses of each other
+*/
 
 console.assert(
   oneAway("pale", "ple") === true,

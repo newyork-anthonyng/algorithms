@@ -1,3 +1,7 @@
+/*
+ * Time complexity: O(n^2)
+ * Space complexity: O(1)
+*/
 // assume that matrix is nxn
 function rotate(matrix) {
   const n = matrix.length; // same as matrix[0].length

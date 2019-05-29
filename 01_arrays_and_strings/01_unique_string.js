@@ -1,4 +1,10 @@
+/*
+ * Time complexity: O(n)
+ * Space complexity: 0(1)
+* */
 function isStringUnique(string) {
+  // another alternative is to use an array with 26 spaces
+  // alphabet[0] would represent "a", alphabet[1] would represet "b", etc.
   const obj = {};
 
   for (let i = 0; i < string.length; i++) {

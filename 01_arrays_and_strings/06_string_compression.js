@@ -1,3 +1,7 @@
+/**
+ * Time complexity: O(n), assuming string concatenation is O(n)
+ * Space complexity: O(n)
+*/
 function stringCompression(string) {
   let result = string[0];
   let count = 0;

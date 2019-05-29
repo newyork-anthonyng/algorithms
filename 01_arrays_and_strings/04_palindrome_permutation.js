@@ -1,3 +1,9 @@
+/**
+ *
+ * Time complexity: O(n)
+ * Space complexity: O(1)
+ *
+ */
 function isPalindromePermutation(string) {
   // create hash that contains count of all letters
   const hash = string.split("").reduce((acc, currentValue) => {
