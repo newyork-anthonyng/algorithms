@@ -20,4 +20,24 @@ function Node(value) {
   }
 }
 
+function createNodes(array) {
+  let head = null;
+  let end = null;
+
+  for (let i = 0; i < array.length; i++) {
+    const newNode = new Node(array[i]);
+
+    if (head === null) {
+      head = newNode;
+      end = head;
+    } else {
+      end.next = newNode;
+      end = end.next;
+    }
+  }
+
+  return head;
+}
+
 module.exports = Node;
+module.exports.createNodes = createNodes;
