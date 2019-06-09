@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <body>
+    <table class="js-table">
+      <tr>
+        <th>Char code</th>
+        <th>Character</th>
+      </tr>
+    </table>
+
+    <script>
+      const $table = document.querySelector(".js-table");
+      let string = "";
+
+      // print all characters and charCodes
+      for (let i = 0; i < 200; i++) {
+        const newRow = `<tr>
+          <td>${i}</td>
+          <td>${String.fromCharCode(i)}</td>
+        </tr>`;
+        string += newRow;
+      }
+
+      $table.innerHTML +=  string;
+    </script>
+  </body>
+</html>
