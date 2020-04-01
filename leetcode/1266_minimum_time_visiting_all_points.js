@@ -1,20 +1,40 @@
+// O(n) time. O(1) space
+// function minTimeToVisitAllPoints(points) {
+//   let counter = 0;
+
+//   let currentPoint = points[0];
+//   for (let i = 1; i < points.length; i++) {
+//     let xDiff = Math.abs(currentPoint[0] - points[i][0]);
+//     let yDiff = Math.abs(currentPoint[1] - points[i][1]);
+
+//     while (xDiff !== 0 && yDiff !== 0) {
+//       xDiff--;
+//       yDiff--;
+//       counter++;
+//     }
+
+//     counter += xDiff;
+//     counter += yDiff;
+
+//     currentPoint = points[i];
+//   }
+
+//   return counter;
+// }
+
 function minTimeToVisitAllPoints(points) {
   let counter = 0;
 
   let currentPoint = points[0];
   for (let i = 1; i < points.length; i++) {
-    let xDiff = Math.abs(currentPoint[0] - points[i][0]);
-    let yDiff = Math.abs(currentPoint[1] - points[i][1]);
+    const xDiff = currentPoint[0] - points[i][0];
+    const yDiff = currentPoint[1] - points[i][1];
+    const diff = Math.max(
+      Math.abs(xDiff),
+      Math.abs(yDiff)
+    )
 
-    while (xDiff !== 0 && yDiff !== 0) {
-      xDiff--;
-      yDiff--;
-      counter++;
-    }
-
-    counter += xDiff;
-    counter += yDiff;
-
+    counter += diff;
     currentPoint = points[i];
   }
 
