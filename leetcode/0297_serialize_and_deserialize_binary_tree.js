@@ -1,5 +1,5 @@
 function TreeNode(value) {
-  this.value = value;
+  this.val = value;
 
   this.left = this.right = null;
 }
@@ -37,7 +37,7 @@ function serialize(root) {
     if (node === null) {
       result.push('null');
     } else {
-      result.push(node.value);
+      result.push(node.val);
 
       queue.push(node.left);
       queue.push(node.right);
